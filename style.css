@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --font-family: "Inter", sans-serif;
+    --color-text: #3e4c59;
+    --color-background: #f2f2f2;
+    --color-hover: #ddd;
+    --color-active: black;
+    --color-active-hover: #444;
+    --color-badge-bg: #ffffff;
+    --color-title: #183b56;
+    --color-vendor: #8c8b8b;
+    --color-discount: #e30211;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 0;
+}
+
+.app-background {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 56px;
+    color: black;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    text-shadow: 1px 6px 2px rgba(0, 0, 0, 0.2)
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 32px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 48px;
+        margin-top: 48px;
+        margin-bottom: 25px;
+    }
+}
+
+#tabsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.tab-btn {
+    background-color: var(--color-background);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    padding: 14px 42px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: var(--color-hover);
+}
+
+.active-tab-btn {
+    background-color: black;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.tab-btn span {
+    opacity: 0;
+}
+
+.active-tab-btn span{
+    opacity: 1;
+    filter: grayscale(100%);
+    margin-right: 2px;
+}
+
+.active-tab-btn:hover {
+    background-color: #444;
+}
+
+.product-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    max-width: 1140px;
+    margin-top: 50px;
+}
+
+.product-item-container {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    border-radius: 12px;
+    margin-right: 20px;
+    margin-bottom: 32px;
+    flex-shrink: 0;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.06);
+}
+
+.product-item-image {
+    width: 100%;
+    border-radius: 5px;
+    height: 400px;
+    background-size: cover;
+    padding: 10px;
+}
+
+.badge {
+    font-size: 12px;
+    padding: 7px 9px;
+    font-weight: bold;
+    margin-top: -4px;
+    background-color: var(--color-badge-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 50%;
+}
+
+.product-item-details-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 24px 32px 24px;
+    flex-grow: 1;
+}
+
+.product-item-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.price-discount-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-card {
+    display: flex;
+    align-items: center;
+}
+
+.product-item-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-title);
+    margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .product-item-title {
+        font-size: 18px;
+    }
+    .tab-btn {
+        padding: 14px 66px;
+    }
+}
+
+.product-item-vendor {
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--color-vendor);
+    line-height: 36px;
+    margin: 0;
+}
+
+.price, .compare-price {
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 12px;
+}
+
+.compare-price {
+    text-decoration: line-through;
+    color: var(--color-vendor);
+}
+
+.discount {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--color-discount);
+    margin-right: 12px;
+}
+
+.add-to-cart-button {
+    height: 35px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #8c8b8b;
+}
+
+.d-none {
+    display: none;
+}
